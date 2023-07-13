@@ -1,0 +1,70 @@
+# OS generated files #
+######################
+.DS_Store
+Thumbs.db
+
+# Editor generated files #
+##########################
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*~
+
+# Build output #
+################
+_site/
+
+# Dependency directories #
+##########################
+node_modules/
+bower_components/
+
+# Jekyll generated files #
+##########################
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.jekyll-archives
+
+# Logs and temporary files #
+###########################
+*.log
+*.tmp
+*.pid
+*.sass
+*.scssc
+*.gem
+
+# Miscellaneous #
+#################
+.env
+.env.local
+.env.*.local
+.env.override
+
+# Ignore specific configuration files #
+#######################################
+# Ignore .env files containing credentials, secrets, and environment-specific configurations
+.env.*
+
+# Ignore deployment artifacts #
+##############################
+deploy/
+
+# Ignore cache and compiled assets #
+###################################
+.cache/
+.compressed/
+
+# Ignore development and test related files #
+############################################
+config/database.yml
+db/*.sqlite3
+spec/
+
+# Ignore package manager lock files #
+#####################################
+package-lock.json
+yarn.lock
