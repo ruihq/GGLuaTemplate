@@ -31,24 +31,12 @@
             text-decoration: none;
             border-radius: 4px;
         }
-
-        .language-select {
-            margin-bottom: 20px;
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to the PC Version</h1>
         <p>This is the PC version of the RHQ Script Template.</p>
-
-        <div class="language-select">
-            <label for="language">Language:</label>
-            <select id="language">
-                <option value="en">English</option>
-                <option value="tl">Filipino</option>
-            </select>
-        </div>
 
         <h2>Starting hook</h2>
         <p>The starting hook is used to initialize the script and display a loading message.</p>
@@ -61,42 +49,22 @@ gg.sleep(2250);
         <p>The welcome phase displays the initial alerts and loading progress.</p>
         <pre><code>
 gg.setVisible(false);
-gg.alert(getWelcomeText());
+gg.alert("Welcome to the RHQ Script Template");
 gg.clearResults();
-gg.toast(getLoadingProgress());
+gg.toast("\n□□□□□0%");
 gg.sleep(500);
-gg.toast(getLoadingProgress());
+gg.toast("\n■□□□□20%");
 gg.sleep(500);
-gg.toast(getLoadingProgress());
+gg.toast("\n■■□□□40%");
 gg.sleep(500);
-gg.toast(getLoadingProgress());
+gg.toast("\n■■■□□60%");
 gg.sleep(500);
-gg.toast(getLoadingProgress());
+gg.toast("\n■■■■□80%");
 gg.sleep(500);
-gg.toast(getLoadingProgress());
+gg.toast("\n■■■■■100%");
 gg.sleep(500);
-gg.alert(getWelcomeText());
+gg.alert("Welcome to RHQ Script Template");
 gg.alert("Start script by clicking the GG Icon!");
-
-function getWelcomeText() {
-    var languageSelect = document.getElementById("language");
-    var language = languageSelect.options[languageSelect.selectedIndex].value;
-    if (language === "tl") {
-        return "Maligayang pagdating sa RHQ Script Template";
-    } else {
-        return "Welcome to the RHQ Script Template";
-    }
-}
-
-function getLoadingProgress() {
-    var languageSelect = document.getElementById("language");
-    var language = languageSelect.options[languageSelect.selectedIndex].value;
-    if (language === "tl") {
-        return "\n■";
-    } else {
-        return "\n■";
-    }
-}
         </code></pre>
 
         <h2>Menu</h2>
@@ -107,65 +75,27 @@ menu = gg.choice({
     "Option 2",
     "Option 3",
     "Option 4"
-}, nil, getMenuTitle());
+}, nil, 'Home Menu - RHQ Script Template');
 
 if menu == 1 then option1() end;
 if menu == 2 then option2() end;
 if menu == 3 then option3() end;
 if menu == 4 then option4() end;
 
-function getMenuTitle() {
-    var languageSelect = document.getElementById("language");
-    var language = languageSelect.options[languageSelect.selectedIndex].value;
-    if (language === "tl") {
-        return "Home Menu - RHQ Script Template";
-    } else {
-        return "Home Menu - RHQ Script Template";
-    }
-}
-        </code></pre>
-
-        <h2>Functions</h2>
-        <p>The functions contain the code for each option in the menu.</p>
-        <pre><code>
 function option1() {
-    var languageSelect = document.getElementById("language");
-    var language = languageSelect.options[languageSelect.selectedIndex].value;
-    if (language === "tl") {
-        gg.alert("Opsyon 1", "OK");
-    } else {
-        gg.alert("Option 1", "OK");
-    }
+    gg.alert("Option 1", "OK");
 }
 
 function option2() {
-    var languageSelect = document.getElementById("language");
-    var language = languageSelect.options[languageSelect.selectedIndex].value;
-    if (language === "tl") {
-        gg.alert("Opsyon 2", "OK");
-    } else {
-        gg.alert("Option 2", "OK");
-    }
+    gg.alert("Option 2", "OK");
 }
 
 function option3() {
-    var languageSelect = document.getElementById("language");
-    var language = languageSelect.options[languageSelect.selectedIndex].value;
-    if (language === "tl") {
-        gg.alert("Opsyon 3", "OK");
-    } else {
-        gg.alert("Option 3", "OK");
-    }
+    gg.alert("Option 3", "OK");
 }
 
 function option4() {
-    var languageSelect = document.getElementById("language");
-    var language = languageSelect.options[languageSelect.selectedIndex].value;
-    if (language === "tl") {
-        gg.alert("Opsyon 4", "OK");
-    } else {
-        gg.alert("Option 4", "OK");
-    }
+    gg.alert("Option 4", "OK");
 }
         </code></pre>
 
