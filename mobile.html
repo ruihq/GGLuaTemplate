@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RHQ Script Template - Mobile Version</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .container {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Mobile Version</h1>
+        <p>This is the mobile-friendly version of the RHQ Script Template.</p>
+
+        <h2>Starting hook</h2>
+        <p>The starting hook is used to initialize the script and display a loading message.</p>
+        <pre><code>
+gg.toast("Starting hook...");
+gg.sleep(2250);
+        </code></pre>
+
+        <h2>Welcome Phase</h2>
+        <p>The welcome phase displays the initial alerts and loading progress.</p>
+        <pre><code>
+gg.setVisible(false);
+gg.alert("RHQ Script Template", "「START」");
+gg.clearResults();
+gg.toast("\n□□□□□0%");
+gg.sleep(500);
+gg.toast("\n■□□□□20%");
+gg.sleep(500);
+gg.toast("\n■■□□□40%");
+gg.sleep(500);
+gg.toast("\n■■■□□60%");
+gg.sleep(500);
+gg.toast("\n■■■■□80%");
+gg.sleep(500);
+gg.toast("\n■■■■■100%");
+gg.sleep(500);
+gg.alert("Welcome to RHQ Script Template");
+gg.alert("Start script by clicking the GG Icon!");
+        </code></pre>
+
+        <h2>Menu</h2>
+        <p>The menu displays the available options and triggers the corresponding functions based on the user's choice.</p>
+        <pre><code>
+menu = gg.choice({
+    "Option 1",
+    "Option 2",
+    "Option 3",
+    "Option 4"
+}, nil, 'Home Menu - RHQ Script Template');
+
+if menu == 1 then option1() end;
+if menu == 2 then option2() end;
+if menu == 3 then option3() end;
+if menu == 4 then option4() end;
+        </code></pre>
+
+        <h2>Functions</h2>
+        <p>The functions contain the code for each option in the menu.</p>
+        <pre><code>
+function option1() {
+    gg.alert("Option 1", "OK");
+}
+
+function option2() {
+    gg.alert("Option 2", "OK");
+}
+
+function option3() {
+    gg.alert("Option 3", "OK");
+}
+
+function option4() {
+    gg.alert("Option 4", "OK");
+}
+        </code></pre>
+
+        <h2>Source Code</h2>
+        <p>Download the RHQ Script Template source code:</p>
+        <a href="gg.lua" download>Download Template</a>
+    </div>
+</body>
+</html>
