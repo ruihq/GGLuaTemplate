@@ -19,7 +19,7 @@
         }
 
         .container {
-            background-color: #f0f0f0;
+            background-color: #f5f5f5;
             padding: 20px;
             border-radius: 4px;
         }
@@ -37,7 +37,7 @@
 <body>
     <div class="container">
         <h1>Welcome to the Mobile Version</h1>
-        <p>This is the mobile-friendly version of the RHQ Script Template.</p>
+        <p>This is the mobile version of the RHQ Script Template.</p>
 
         <h2>Starting hook</h2>
         <p>The starting hook is used to initialize the script and display a loading message.</p>
@@ -50,7 +50,7 @@ gg.sleep(2250);
         <p>The welcome phase displays the initial alerts and loading progress.</p>
         <pre><code>
 gg.setVisible(false);
-gg.alert("RHQ Script Template", "「START」");
+gg.alert("Welcome to the RHQ Script Template");
 gg.clearResults();
 gg.toast("\n□□□□□0%");
 gg.sleep(500);
@@ -82,11 +82,7 @@ if menu == 1 then option1() end;
 if menu == 2 then option2() end;
 if menu == 3 then option3() end;
 if menu == 4 then option4() end;
-        </code></pre>
 
-        <h2>Functions</h2>
-        <p>The functions contain the code for each option in the menu.</p>
-        <pre><code>
 function option1() {
     gg.alert("Option 1", "OK");
 }
