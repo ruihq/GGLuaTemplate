@@ -2,9 +2,10 @@
 <html>
 <head>
     <title>RHQ Script Template - PC Version</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 20px;
         }
 
@@ -19,6 +20,15 @@
         .container {
             background-color: #f5f5f5;
             padding: 20px;
+            border-radius: 4px;
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #7F39FB;
+            color: #fff;
+            text-decoration: none;
             border-radius: 4px;
         }
     </style>
@@ -95,7 +105,7 @@ function option4() {
 
         <h2>Source Code</h2>
         <p>Download the RHQ Script Template source code:</p>
-        <a href="gg.lua" download>Download Template</a>
+        <a href="gg.lua" download class="download-button">Download Template</a>
     </div>
 </body>
 </html>
